@@ -1,0 +1,110 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.ReCycle2" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/green</item>
+        <item name="colorPrimaryVariant">@color/green_secondary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+<!--    Top menu style-->
+    <style name="CustomCardViewStyle" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay_card_custom_corners</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay_card_custom_corners" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">1dp</item>
+        <item name="cornerSizeTopLeft">1dp</item>
+        <item name="cornerSizeBottomRight">20dp</item>
+        <item name="cornerSizeBottomLeft">20dp</item>
+    </style>
+
+<!--    Dialog style-->
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/dialog_slide_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_slide_out</item>
+    </style>
+
+<!--    Spinner style-->
+    <style name="SpinnerItemText" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">14sp</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+<!--    Text-->
+    <style name="Text" />
+    <style name="Text.Display" />
+    <style name="Text.Title" />
+    <style name="Text.Body" />
+    <style name="Text.Label" />
+
+    <style name="Text.Display.Large">
+        <item name="android:textSize">24sp</item>
+        <item name="fontFamily">@font/poppins_semi_bold</item>
+    </style>
+    <style name="Text.Display.XSmall">
+        <item name="android:textSize">16sp</item>
+        <item name="fontFamily">@font/poppins_semi_bold</item>
+    </style>
+
+    <style name="Text.Title.Large">
+        <item name="android:textSize">20sp</item>
+        <item name="fontFamily">@font/poppins_medium</item>
+    </style>
+    <style name="Text.Title.Normal">
+        <item name="android:textSize">20sp</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+    <style name="Text.Title.Small">
+        <item name="android:textSize">16sp</item>
+        <item name="fontFamily">@font/poppins_semi_bold</item>
+    </style>
+
+    <style name="Text.Body.Large">
+        <item name="android:textSize">16sp</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+    <style name="Text.Body.Normal">
+        <item name="android:textSize">14sp</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+    <style name="Text.Body.Small">
+        <item name="android:textSize">12sp</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+    <style name="Text.Body.XSmall">
+        <item name="android:textSize">11sp</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="Text.Label.Large" >
+        <item name="android:textSize">24sp</item>
+        <item name="fontFamily">@font/poppins_medium</item>
+    </style>
+    <style name="Text.Label.Normal" >
+        <item name="android:textSize">20sp</item>
+        <item name="fontFamily">@font/poppins_medium</item>
+    </style>
+    <style name="Text.Label.Small" >
+        <item name="android:textSize">16sp</item>
+        <item name="fontFamily">@font/poppins_medium</item>
+    </style>
+  <!-- Base application theme. -->
+    <style name="Base.Theme.ReCycle2" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+</resources>

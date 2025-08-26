@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.welcome.RegisterFragment">
+
+    <LinearLayout
+        android:id="@+id/layoutDaftarBackground"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/new_icon_background_login_register"
+        android:orientation="vertical"
+        android:paddingHorizontal="28dp"
+        android:paddingVertical="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            style="@style/Text.Display.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/daftar"
+            android:textColor="@color/white" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Untuk membuat akun"
+            style="@style/Text.Display.XSmall"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/register_cv_input_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="180dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="28dp"
+        app:cardCornerRadius="20dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:id="@+id/register_ll_input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="40dp">
+
+            <TextView
+                android:id="@+id/tvRegisterTextEmail"
+                style="@style/Text.Title.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textColor="@color/black" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/registerEmailEditTextLayout"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="8dp"
+                app:hintEnabled="false"
+                app:boxBackgroundColor="@color/white"
+                app:boxBackgroundMode="filled"
+                app:boxStrokeColor="@color/grey">
+
+                <com.mokaneko.recycle2.ui.custom_view.EditTextEmail
+                    android:id="@+id/registerEmailEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="xxxxxxxxxx@gmail.com"
+                    android:inputType="textEmailAddress"
+                    android:padding="16dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/light_grey"
+                    android:textSize="14sp"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/registerTvTextPassword"
+                style="@style/Text.Title.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Kata Sandi"
+                android:textColor="@color/black" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/registerPasswordEditTextLayout"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="8dp"
+                app:hintEnabled="false"
+                app:boxBackgroundColor="@color/white"
+                app:boxBackgroundMode="filled"
+                app:boxStrokeColor="@color/grey"
+                app:endIconMode="password_toggle">
+
+                <com.mokaneko.recycle2.ui.custom_view.EditTextPassword
+                    android:id="@+id/registerPasswordEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="**********"
+                    android:inputType="textPassword"
+                    android:padding="16dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/light_grey"
+                    android:textSize="14sp"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/registerTvRetypeTextPassword"
+                style="@style/Text.Title.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Konfirmasi Kata Sandi"
+                android:textColor="@color/black" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/registerRetypePasswordEditTextLayout"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="8dp"
+                app:hintEnabled="false"
+                app:boxBackgroundColor="@color/white"
+                app:boxBackgroundMode="filled"
+                app:boxStrokeColor="@color/grey"
+                app:endIconMode="password_toggle">
+
+                <com.mokaneko.recycle2.ui.custom_view.EditTextPassword
+                    android:id="@+id/registerRetypePasswordEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="**********"
+                    android:inputType="textPassword"
+                    android:padding="16dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/light_grey"
+                    android:textSize="14sp"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnRegister"
+                style="@style/Text.Display.XSmall"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/green_primary"
+                android:text="@string/daftar"
+                app:cornerRadius="10dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/registerTvToLoginText"
+                    style="@style/Text.Title.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sudah memiliki akun?" />
+
+                <TextView
+                    android:id="@+id/registerTvToLogin"
+                    style="@style/Text.Title.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="10dp"
+                    android:text="@string/masuk"
+                    android:textColor="@color/green_primary" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:elevation="5dp"
+        android:visibility="gone"
+        android:indeterminateTint="@color/green_primary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

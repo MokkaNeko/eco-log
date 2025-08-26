@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottom_nav_menu_custom"
+    android:layout_width="match_parent"
+    android:layout_gravity="bottom"
+    android:layout_height="120dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:elevation="8dp"
+    android:gravity="center"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:id="@+id/menuItemCatalog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:alpha="0.3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/menuItemSampah">
+
+        <ImageView
+            android:id="@+id/menu_image_katalog"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_menu_catalog"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"
+            app:tint="@color/black"
+            android:padding="10dp" />
+        <TextView
+            android:id="@+id/menu_text_katalog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Katalog"
+            android:textStyle="bold"
+            style="@style/Text.Body.Small"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menuItemSampah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:alpha="0.3"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/menuItemCatalog"
+        app:layout_constraintEnd_toStartOf="@id/menuFill">
+
+        <ImageView
+            android:id="@+id/menu_image_terbuang"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_menu_disposed"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"
+            app:tint="@color/black"
+            android:padding="10dp" />
+        <TextView
+            android:id="@+id/menu_text_terbuang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Terbuang"
+            android:textStyle="bold"
+            style="@style/Text.Body.Small"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menuFill"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:cardCornerRadius="10dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/menuItemSampah"
+        app:layout_constraintEnd_toStartOf="@id/menuItemCategory">
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menuItemCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:alpha="0.3"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/menuFill"
+        app:layout_constraintEnd_toStartOf="@id/menuItemLogout">
+
+        <ImageView
+            android:id="@+id/menu_image_kategori"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_menu_category"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"
+            app:tint="@color/black"
+            android:padding="10dp" />
+        <TextView
+            android:id="@+id/menu_text_kategori"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kategori"
+            android:textStyle="bold"
+            style="@style/Text.Body.Small"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menuItemLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:alpha="0.3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/menuItemCategory"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/menu_image_keluar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_menu_logout"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"
+            app:tint="@color/black"
+            android:padding="10dp" />
+        <TextView
+            android:id="@+id/menu_text_keluar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Keluar"
+            style="@style/Text.Body.Small"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

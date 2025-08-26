@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/bone"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.kategori.CategoryRecommendationActivity">
+
+    <ScrollView
+        android:id="@+id/rec_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="-10dp"
+        android:orientation="vertical"
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toBottomOf="@id/rec_top_nav"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/rec_card_image_container"
+                android:layout_width="260dp"
+                android:layout_height="260dp"
+                android:layout_marginTop="40dp"
+                app:cardElevation="5dp"
+                app:cardCornerRadius="20dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+                <ImageView
+                    android:id="@+id/rec_iv_sampah"
+                    android:contentDescription="gambar sampah"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/img_placeholder_1x1" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/rec_category_container"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="20dp"
+                app:cardElevation="5dp"
+                app:cardBackgroundColor="@color/green_primary"
+                app:layout_constraintTop_toBottomOf="@id/rec_card_image_container"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:cardCornerRadius="20dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:id="@+id/rec_icon_category"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/new_icon_anorganic"
+                        android:layout_marginEnd="20dp" />
+                    <TextView
+                        android:id="@+id/rec_text_category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Category"
+                        style="@style/Text.Display.XSmall"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/rec_category_container"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="20dp"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/rec_tv_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="12dp"
+                        android:paddingHorizontal="10dp"
+                        android:text="Rec Title"
+                        style="@style/Text.Display.XSmall"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/rec_tv_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lorem_ipsum"
+                        android:paddingHorizontal="10dp"
+                        android:paddingBottom="50dp"
+                        style="@style/Text.Body.Normal"
+                        android:textColor="@color/black"
+                        android:justificationMode="inter_word" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <include
+        android:id="@+id/rec_top_nav"
+        layout="@layout/custom_top_nav"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

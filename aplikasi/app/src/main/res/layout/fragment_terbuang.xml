@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/terbuang_fragment_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bone"
+    tools:context=".ui.terbuang.TerbuangFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_terbuang"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"
+        tools:listitem="@layout/item_terbuang" />
+
+    <TextView
+        android:id="@+id/terbuang_data_placeholder_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:gravity="center"
+        android:layout_marginHorizontal="30dp"
+        android:text="Belum ada data sampah"
+        style="@style/Text.Display.Large"
+        android:textColor="@color/green_primary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/terbuang_data_placeholder_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:visibility="gone"
+        android:text="Pindahkan data sampah dari katalog ke terbuang"
+        android:textColor="@color/green_primary"
+        style="@style/Text.Display.XSmall"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/terbuang_data_placeholder_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_katalog">
+
+    <fragment
+        android:id="@+id/navigation_katalog"
+        android:name="com.mokaneko.recycle2.ui.katalog.KatalogFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_katalog" />
+
+    <fragment
+        android:id="@+id/navigation_kategori"
+        android:name="com.mokaneko.recycle2.ui.kategori.KategoriFragment"
+        android:label="@string/kategori"
+        tools:layout="@layout/fragment_kategori" />
+    <fragment
+        android:id="@+id/terbuangFragment"
+        android:name="com.mokaneko.recycle2.ui.terbuang.TerbuangFragment"
+        android:label="fragment_terbuang"
+        tools:layout="@layout/fragment_terbuang" />
+</navigation>

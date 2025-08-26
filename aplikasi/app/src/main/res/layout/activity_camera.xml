@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    tools:context=".ui.kamera.CameraActivity">
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/camera_preview_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#222"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/camera_result_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#222"
+        android:scaleType="centerCrop"
+        tools:visibility="visible"
+        android:visibility="gone"
+        android:contentDescription="hasil tangkapan"
+        tools:src="@drawable/img_placeholder_1x1"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/camera_top_control"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_marginTop="50dp"
+        android:gravity="fill_horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:id="@+id/camera_button_back"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:rotation="-90"
+            android:src="@drawable/icon_arrow_up"
+            android:contentDescription="Back"
+            app:tint="@color/white" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/camera_button_switch"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="fitCenter"
+            android:padding="10dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/new_icon_camera_flip"
+            android:contentDescription="Switch Camera"
+            app:tint="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/camera_bottom_control"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="50dp">
+
+        <ImageButton
+            android:id="@+id/camera_button_gallery"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:scaleType="fitCenter"
+            android:layout_marginStart="20dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/icon_gallery"
+            android:contentDescription="Open Gallery"
+            app:tint="@android:color/white" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/camera_button_shutter"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="fitCenter"
+            android:layout_marginHorizontal="32dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/new_icon_camera_shutter"
+            android:contentDescription="Shutter" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/camera_button_flash"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:padding="8dp"
+            android:layout_marginEnd="20dp"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"
+            android:src="@drawable/new_icon_flashon"
+            android:contentDescription="Toggle Flash"
+            app:tint="@android:color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/camera_bottom_confirm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="16dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="50dp">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/camera_button_confirm"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"
+            android:src="@drawable/icon_check"
+            app:tint="@color/white"
+            android:contentDescription="Konfirmasi" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/camera_button_cancel"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"
+            android:src="@drawable/icon_close"
+            app:tint="@color/white"
+            android:contentDescription="batal" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
