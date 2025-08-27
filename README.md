@@ -1,5 +1,6 @@
 # Eco-log ♻️  
-*An Android & Machine Learning-based app for smarter household waste classification and management.*  
+*An Android-based app for smarter household waste classification and management.*  
+![cover](documents/eco_log_cover.png)
 
 ---
 
@@ -14,8 +15,8 @@ This repository consists of two main parts:
 
 ```
 .
-├── aplikasi/          # Android app (Kotlin, Firebase, Cloudinary, TFLite)
-└── machine_learning/  # ML model training (Python, TensorFlow, dataset, preprocessing)
+├── aplikasi/          
+└── machine_learning/  
 ```
 
 - **aplikasi/** → Contains the Android application source code.  
@@ -73,11 +74,15 @@ This repository consists of two main parts:
 ---
 
 ## 📸 Usage & Demo  
-Screenshots of the application (replace with your own images):  
+Screenshots of the application:  
 
-| Home Screen | Waste Classification | Waste Catalog |
+| Splash Screen | Welcome Screen | Register |
 |-------------|-----------------------|---------------|
-| ![home](docs/images/home.png) | ![classification](docs/images/classification.png) | ![catalog](docs/images/catalog.png) |
+| ![splash screen](documents/splash_screen.jpg) | ![welcome](documents/welcome.jpg) | ![register](documents/register.jpg) |
+
+| Home Screen | Classification Result | Add to Catalog |
+|-------------|-----------------------|---------------|
+| ![home](documents/home.jpg) | ![result](documents/result.jpg) | ![add](documents/add.jpg) |
 
 Example output of classification:  
 - Input: Plastic Bottle → Output: **Botol Plastik**  
@@ -86,10 +91,17 @@ Example output of classification:
 ---
 
 ## 🔮 Future Improvements  
-- Add recycling & disposal recommendations  
-- Push notifications for scheduled waste disposal  
+- Collaborating with relevant institutions to achieve more structured waste management
+- Adding features such as processing location, processing recommendation videos, and chat with related institutions
+- Adding social features to enable waste exchange with other users
+- Adding gamification features such as a point system for each successfully exchanged waste
 - Optimize ML model for better accuracy & efficiency  
 - Expand dataset for more waste categories  
+
+---
+
+## 👥 Contributors  
+- **Ichsan** → [Ichsan Ardika Akbar](https://linkedin.com/in/ichsan-ardika)
 
 ---
 
